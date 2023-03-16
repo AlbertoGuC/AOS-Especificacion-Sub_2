@@ -1,5 +1,5 @@
 # AOS-Especificacion-Sub_2
 
+## Integrantes:<br>Alberto Guardiola Churiaque<br>Álvaro Alonso Devesa (●'◡'●)
+
 ## Trabajo AOS
-Integrantes:  Alberto Guardiola Churiaque 
-              Álvaro Alonso Devesa (●'◡'●)
