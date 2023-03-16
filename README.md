@@ -1,5 +1,4 @@
 # AOS-Especificacion-Sub_2
 
-## Trbajo AOS
-
-### Trbjo AOS
+## Trabajo AOS
+Integrantes:  Alberto Guardiola Churiaque
