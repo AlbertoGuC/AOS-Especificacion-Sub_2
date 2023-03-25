@@ -205,7 +205,16 @@ components:
           properties:
             id:
               $ref: '#/components/schemas/Id_Vehiculo'
-            ## AÑADIR LAS PROPIEDADES QUE SE QUIERAN A LOS VEHÍCULOS
+            marca:
+              $ref: '#/components/schemas/Marca_Vehiculo'
+            modelo:
+              $ref: '#/components/schemas/Modelo_Vehiculo'
+            año:
+              $ref: '#/components/schemas/Fecha_Vehiculo'
+            matricula:
+              $ref: '#/components/schemas/Matricula_Vehiculo'
+            estado:
+              $ref: '#/components/schemas/Estado_Vehiculo'
             links:
               description: Enlaces de relación del Vehiculo
               readOnly: true
@@ -217,6 +226,10 @@ components:
                   $ref: '#/components/schemas/Link'
       example: { "vehiculo": {
                     "id": "1HGBH41JXMN109186",
+                    "marca": "Seat",
+                    "modelo": "Ibiza",
+                    "fecha:":"1/7/2000",
+                    "estado": "En reparacion",
                     "links": {
                       "parent": {
                         "href": "http://example.com/api/v1/vehiculos",
@@ -234,8 +247,41 @@ components:
       title: Identificador único del vehiculo
       type: string
       pattern: "^[A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][0-9][A-Z,0-9][A-Z,0-9][0-9][0-9][0-9][0-9][0-9][0-9]"
-      example: "1HGBH41JXMN109186"
-      x-faker: helpers.regexpStyleStringParse('[10000000000000000-99999999999999999]')
+      #example: "1HGBH41JXMN109186"
+      x-faker: helpers.regexpStyleStringParse()
+    
+    Marca_Vehiculo:
+      title: Marca del vehiculo
+      type: string
+      example: "Seat"
+
+    Modelo_Vehiculo:
+      title: Modelo del vehiculo
+      type: string
+      example: "Sedán"
+
+    Fecha_Vehiculo:
+      title: Año de matriculacion del vehiculo
+      type: string
+      pattern: "^[1-31]/[1-12]/[1900-2500]"
+      example: "1/12/1998"
+      x-faker: helpers.regexpStyleStringParse()
+
+    Matricula_Vehiculo:
+      title: Matricula del vehiculo
+      type: string
+      pattern: "^[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z]"
+      #example: "1254BCB"
+      x-faker: helpers.regexpStyleStringParse(')
+
+    Estado_Vehiculo:
+      title: |
+        Clasificación de los vehiculos dependiendo de si estan en reparacion o arreglado
+        * Arreglado
+        * En reparación
+      type: string
+      enum: [ Arreglado, EnReparacion ]
+      x-faker: helpers.arrayElement()
 
     HTTP_Problem:
       type: object
@@ -316,8 +362,16 @@ components:
             type: object
             required: [ id ]
             properties:
-               id:
-                 $ref: '#/components/schemas/Id_Vehiculo'
+              id:
+                $ref: '#/components/schemas/Id_Vehiculo'
+              modelo:
+                 $ref: '#/components/schemas/Modelo_Vehiculo'
+              fecha:
+                 $ref: '#/components/schemas/Fecha_Vehiculo'
+              matricula:
+                 $ref: '#/components/schemas/Matricula_Vehiculo'
+              Estado:
+                 $ref: '#/components/schemas/Estado_Vehiculo'
 
     vehiculoUpdate:
       description: Nuevos atributos del Vehiculo
@@ -423,12 +477,12 @@ components:
     vehiculos-example:
       value:
         vehiculos:
-          - { "vehiculo": { "id": "1HGBH41JXMN109186",
+          - { "vehiculo": { "id": "1HGBH41JXMN109186", "marca": "Seat", "modelo": "Ibiza", "fecha:":"1/7/2000", "matricula": "1234API", "estado": "En reparacion",
                 "links": {
                   "parent": { "href": "https://example.com/api/v1/vehiculos", "rel": "vehiculo_post vehiculo_cget"},
                   "self": { "href": "https://example.com/api/v1vehiculos/1HGBH41JXMN109186", "rel": "vehiculo_get vehiculo_delete vehiculo_put" }
               }}}
-          - { "vehiculo": { "id": "5YJSA1DG9DFP14705",
+          - { "vehiculo": { "id": "5YJSA1DG9DFP14705", "marca": "Porsche", "modelo": "911", "fecha:":"1/7/2010", "matricula": "4365RES", "estado": "En reparacion",
                 "links": {
                   "parent": { "href": "https://example.com/api/v1/vehiculos", "rel": "vehiculo_post vehiculo_cget"},
                   "self": { "href": "https://example.com/api/v1/vehiculos/5YJSA1DG9DFP14705", "rel": "vehiculo_get vehiculo_delete vehiculo_put" }
