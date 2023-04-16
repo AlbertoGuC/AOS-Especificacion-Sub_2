@@ -30,4 +30,4 @@ $ docker-compose up
 ```
 
 Con los servicios desplegados, se puede acceder a una interfaz desde la que se puede revisar la especificación y realizar consultas al servidor mock. 
-Se puede acceder desde el navegador en el siguiente URL: 'localhost:8000'.
+Se puede acceder desde el navegador en el siguiente URL: `localhost:8000`.
