@@ -1,7 +1,7 @@
 <h1>AOS-Especificacion-Sub_2</h1>
 
 <h2>Integrantes</h2>
-<p>Alberto Guardiola Churiaque <br>Álvaro Alonso Devesa <br>Omar Piñeiro Parada</p>
+<p>Alberto Guardiola Churiaque <br>Álvaro Alonso Devesa <br>Omar Piñeiro Parada <br>Javier Rodríguez de Trujillo Landecho <br> Alberto Rey Cristino</p>
 
 <h2>Trabajo AOS</h2>
 <p>
