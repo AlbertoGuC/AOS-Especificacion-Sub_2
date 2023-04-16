@@ -2,7 +2,7 @@ openapi: 3.0.3
 
 info:
   version: 1.0.0
-  title: 🚜[AOS - 23 - Subsistema_2] Gestión de vehiculos 🚘
+  title: [AOS - 23 - Subsistema_2] Gestión de vehiculos 
   description: >
     ## **[AOS - 23 - Subsistema_2]** API REST para la gestión de los vehiculos de los clientes de unb taller.
   license:
@@ -11,7 +11,6 @@ info:
   contact:
     name: Equipo 7
     url: 'https://www.etsisi.upm.es/'
-
 
 servers:
   - url: http://127.0.0.1:80/api/v1
@@ -58,10 +57,10 @@ paths:
                     readOnly: true
                     type: object
                     properties:
-                     prevPage:
-                      $ref: '#/components/schemas/Link' ## Esto hay que establecerlo
+                      prevPage:
+                        $ref: '#/components/schemas/Link' ## Esto hay que establecerlo
                       nextPage:
-                       $ref: '#/components/schemas/Link' ## Esto hay que establecerlo
+                        $ref: '#/components/schemas/Link' ## Esto hay que establecerlo
               examples:
                 vehiculos-example:
                   $ref: '#/components/examples/vehiculos-example' ## Esto hay que establecerlo
@@ -313,7 +312,7 @@ components:
 
     Link:
       description: Enlace de relación
-      title: '🔗 Link'
+      title: ' Link'
       type: object
       properties:
         href:
