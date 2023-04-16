@@ -1,29 +1,32 @@
-<h1>AOS-Especificacion-Sub_2</h1>
+# AOS-Especificacion-Sub_2
 
-<h2>Integrantes</h2>
-<p>Alberto Guardiola Churiaque <br>Álvaro Alonso Devesa <br>Omar Piñeiro Parada <br>Javier Rodríguez de Trujillo Landecho <br> Alberto Rey Cristino</p>
+## Integrantes
+- Alberto Guardiola Churiaque
+- Álvaro Alonso Devesa 
+- Omar Piñeiro Parada 
+- Javier Rodríguez de Tujillo Landecho
+- Alberto Rey Cristino
 
-<h2>Trabajo AOS</h2>
-<p>
-  Que caracteristicas gurado de un vehiculo: color, marca, modelo, combustible...<br>Los vehiculos pertenecen a un cliente<br>
-  Gestión de los vehículos que son propiedad de los clientes y que se reparan y/o revisan en el taller. Cada vehículo estará identificado de forma única por su VIN.<br> 
-</p>
-</br>VIN
-</br>Marca
-</br>Modelo
-</br>Año
-</br>Matrícula
-</br>Combustible
-</br>Fecha última intervención
+## Trabajo AOS 
 
-<br><br><br><br>
+# Guardado y gestión de los vehiculos de un cliente
 
-<p>
-  OPTIONS<br>
-  GET<br>
-  HEAD<br>
-  POST<br>
-  PUT<br>
-  DELETE<br>
-</p>
+Gestión de los vehículos que son propiedad de los clientes y que se reparan y/o revisan en el taller. Cada vehículo estará identificado de forma única por su VIN.<br> 
 
+- VIN
+- Marca
+- Modelo
+- Año
+- Matrícula
+- Fecha última intervención
+
+# Despliegue 
+
+Para desplegar un servidor mock y una UI con docker ejecutar el siguiente comando en la raíz del proyecto:
+
+```
+$ docker-compose up
+```
+
+Con los servicios desplegados, se puede acceder a una interfaz desde la que se puede revisar la especificación y realizar consultas al servidor mock. 
+Se puede acceder desde el navegador en el siguiente URL: 'localhost:8000'.
