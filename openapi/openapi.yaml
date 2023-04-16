@@ -4,7 +4,7 @@ info:
   title: 🚜[AOS - 23 - Subsistema_2] Gestión de vehiculos 🚘
   description: >
     ## **[AOS - 23 - Subsistema_2]** API REST para la gestión de los vehiculos
-    de los clientes de unb taller.
+    de los clientes de un taller.
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT

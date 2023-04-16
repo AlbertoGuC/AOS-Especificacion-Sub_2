@@ -2,15 +2,16 @@ openapi: 3.0.3
 
 info:
   version: 1.0.0
-  title: [AOS - 23 - Subsistema_2] Gestión de vehiculos 
+  title: 🚜[AOS - 23 - Subsistema_2] Gestión de vehiculos 🚘
   description: >
-    ## **[AOS - 23 - Subsistema_2]** API REST para la gestión de los vehiculos de los clientes de unb taller.
+    ## **[AOS - 23 - Subsistema_2]** API REST para la gestión de los vehiculos de los clientes de un taller.
   license:
     name: MIT
     url: 'https://opensource.org/licenses/MIT'
   contact:
     name: Equipo 7
     url: 'https://www.etsisi.upm.es/'
+
 
 servers:
   - url: http://127.0.0.1:80/api/v1
@@ -33,15 +34,15 @@ paths:
       operationId: vehiculo_cget
       tags: ['Vehiculo']
       parameters:
-        - $ref: '#/components/parameters/pageParam' ## Esto hay que establecerlo
-        - $ref: '#/components/parameters/orderParam' ## Esto hay que etablecerlo
-        - $ref: '#/components/parameters/orderingParam' ## Esto hay que establecerlo
+        - $ref: '#/components/parameters/pageParam' 
+        - $ref: '#/components/parameters/orderParam' 
+        - $ref: '#/components/parameters/orderingParam' 
       responses:
         '200':
           description: Lista de vehiculos disponibles
           headers:
             ETag:
-              $ref: '#/components/headers/ETag' ## Esto hay que establecerlo
+              $ref: '#/components/headers/ETag' 
           content:
             application/json:
               schema:
@@ -51,21 +52,21 @@ paths:
                     description: array de vehiculos
                     type: array
                     items:
-                     $ref: '#/components/schemas/Vehiculo' ## Esto hay que establecerlo
+                     $ref: '#/components/schemas/Vehiculo' 
                   links:
                     description: Enlaces de paginación
                     readOnly: true
                     type: object
                     properties:
                       prevPage:
-                        $ref: '#/components/schemas/Link' ## Esto hay que establecerlo
+                        $ref: '#/components/schemas/Link' 
                       nextPage:
-                        $ref: '#/components/schemas/Link' ## Esto hay que establecerlo
+                        $ref: '#/components/schemas/Link' 
               examples:
                 vehiculos-example:
-                  $ref: '#/components/examples/vehiculos-example' ## Esto hay que establecerlo
+                  $ref: '#/components/examples/vehiculos-example' 
         '404':
-          $ref: '#/components/responses/Response_404' ## Esto hay que establecerlo
+          $ref: '#/components/responses/Response_404' 
     options:
       summary:  Proporciona la lista de los métodos HTTP soportados por esta ruta.
       description: Devuelve una cabecera `Allow` con la lista de métodos HTTP soportados (separados por comas).
@@ -76,9 +77,9 @@ paths:
           description: 'cabecera `Allow` &lt;El cuerpo de la respuesta está vacío&gt;'
           headers:
             Allow:
-              $ref: '#/components/headers/Allow' ## Esto hay que establecerlo
+              $ref: '#/components/headers/Allow' 
     post:
-      summary: Añade un nuevo veñhiculo
+      summary: Añade un nuevo vehiculo
       description: |
         La siguiente tabla define los códigos de estado que puede devolver este endpoint
         
@@ -91,25 +92,25 @@ paths:
       tags: ['Vehiculo']
       operationId: vehiculo_post
       requestBody:
-        $ref: '#/components/requestBodies/vehiculoRB' ## Esto hay que establecerlo
+        $ref: '#/components/requestBodies/vehiculoRB' 
       responses:
         '201':
           description: Nuevo vehiculo creado
           headers:
             Location:
-              $ref: '#/components/headers/Location' ## Esto hay que establecerlo
+              $ref: '#/components/headers/Location' 
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Vehiculo' ## Esto hay que establecerlo
+                $ref: '#/components/schemas/Vehiculo' 
         '400':
-          $ref: '#/components/responses/Response_400' ## Esto hay que establecerlo
+          $ref: '#/components/responses/Response_400' 
         '422':
-          $ref: '#/components/responses/Response_422' ## Esto hay que establecerlo
+          $ref: '#/components/responses/Response_422' 
 
   /vehiculos/{vehiculoVIN_id}:
     parameters:
-      - $ref: '#/components/parameters/vehiculoVINId' ## Esto hay que establecerlo
+      - $ref: '#/components/parameters/vehiculoVINId' 
     options:
       summary: Proporciona la lista de los métodos HTTP soportados por esta ruta.
       description: Devuelve una cabecera `Allow` con la lista de métodos HTTP soportados (separados por comas).
@@ -120,7 +121,7 @@ paths:
           description: 'cabecera `Allow` &lt;El cuerpo de la respuesta está vacío&gt;'
           headers:
             Allow:
-              $ref: '#/components/headers/Allow' ## Esto hay que establecerlo
+              $ref: '#/components/headers/Allow' 
     get:
       summary: Obtiene un vehiculo identificado por `vehiculoVINId`
       description: |
@@ -137,13 +138,13 @@ paths:
           description: Vehiculo
           headers:
             ETag:
-              $ref: '#/components/headers/ETag' ## Esto hay que establecerlo
+              $ref: '#/components/headers/ETag' 
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Vehiculo' ## Esto hay que establecerlo
+                $ref: '#/components/schemas/Vehiculo' 
         '404':
-          $ref: '#/components/responses/Response_404' ## Esto hay que establecerlo
+          $ref: '#/components/responses/Response_404' 
     delete:
       summary: Elimina el vehiculo identificado por `vehiculoVINId`
       description: |
@@ -158,7 +159,7 @@ paths:
         '204':
           description: Vehiculo eliminado &lt;Cuerpo de la respuesta vacío&gt;
         '404':
-          $ref: '#/components/responses/Response_404' ## Esto hay que establecerlo
+          $ref: '#/components/responses/Response_404' 
     put:
       tags: ['Vehiculo']
       summary: Modifica el vehiculo identificado por `vehiculoVINId`.
@@ -173,22 +174,22 @@ paths:
       operationId: vehiculo_put
       parameters:
         # https://www.rfc-editor.org/rfc/rfc7232.html#page-13
-        - $ref: '#/components/parameters/ifMatchParam' ## Esto hay que establecerlo
+        - $ref: '#/components/parameters/ifMatchParam' 
       requestBody:
-        $ref: '#/components/requestBodies/vehiculoUpdate' ## Esto hay que establecerlo
+        $ref: '#/components/requestBodies/vehiculoUpdate' 
       responses:
         '209':
           description: '`CONTENT RETURNED`: El vehiculo ha sido actualizado'
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Vehiculo' ## Esto hay que establecerlo
+                $ref: '#/components/schemas/Vehiculo' 
         '404':
-          $ref: '#/components/responses/Response_404' ## Esto hay que establecerlo
+          $ref: '#/components/responses/Response_404' 
         '412':
-          $ref: '#/components/responses/Response_412' ## Esto hay que establecerlo
+          $ref: '#/components/responses/Response_412' 
         '422':
-          $ref: '#/components/responses/Response_422' ## Esto hay que establecerlo
+          $ref: '#/components/responses/Response_422' 
 
 components:
   schemas:
@@ -312,7 +313,7 @@ components:
 
     Link:
       description: Enlace de relación
-      title: ' Link'
+      title: '🔗 Link'
       type: object
       properties:
         href:

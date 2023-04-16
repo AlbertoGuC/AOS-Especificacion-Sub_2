@@ -42,8 +42,8 @@ get:
                 properties:
                   prevPage:
                     $ref: ../components/schemas/Link.yaml
-                    nextPage:
-                      $ref: ../components/schemas/Link.yaml
+                  nextPage:
+                    $ref: ../components/schemas/Link.yaml
           examples:
             vehiculos-example:
               $ref: ../components/examples/vehiculos-example.yaml
@@ -64,7 +64,7 @@ options:
         Allow:
           $ref: ../components/headers/Allow.yaml
 post:
-  summary: Añade un nuevo veñhiculo
+  summary: Añade un nuevo vehiculo
   description: >
     La siguiente tabla define los códigos de estado que puede devolver este
     endpoint
