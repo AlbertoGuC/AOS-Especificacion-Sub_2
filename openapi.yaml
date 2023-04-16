@@ -2,7 +2,7 @@ openapi: 3.0.3
 
 info:
   version: 1.0.0
-  title: 🚕[AOS - 23 - Subsistema_2] Gestión de vehiculos 🚘
+  title: 🚜[AOS - 23 - Subsistema_2] Gestión de vehiculos 🚘
   description: >
     ## **[AOS - 23 - Subsistema_2]** API REST para la gestión de los vehiculos de los clientes de un taller.
   license:
@@ -254,6 +254,8 @@ components:
               $ref: '#/components/schemas/Matricula_Vehiculo'
             estado:
               $ref: '#/components/schemas/Estado_Vehiculo'
+            DNI:
+              $ref: '#/components/schemas/DNI'
             links:
               description: Enlaces de relación del Vehiculo
               readOnly: true
@@ -306,6 +308,8 @@ components:
               $ref: '#/components/schemas/Matricula_Vehiculo'
             estado:
               $ref: '#/components/schemas/Estado_Vehiculo'
+            DNI:
+              $ref: '#/components/schemas/DNI'
             links:
               description: Enlaces de relación del Vehiculo
               readOnly: true
