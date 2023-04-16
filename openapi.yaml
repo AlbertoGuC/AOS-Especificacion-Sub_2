@@ -263,7 +263,7 @@ components:
                   $ref: '#/components/schemas/Link'
                 self:
                     $ref: '#/components/schemas/Link'
-          example: { "vehiculo": {
+          example: [{ "vehiculo": {
                       "id": "1HGBH41JXMN109186",
                       "marca": "Seat",
                       "modelo": "Ibiza",
@@ -281,7 +281,8 @@ components:
                         }
                       }
                     }
-                }
+                  }                
+                ]
       
     Vehiculo:
       title: 'Vehiculo'
@@ -469,6 +470,8 @@ components:
                  $ref: '#/components/schemas/Matricula_Vehiculo'
               Estado:
                  $ref: '#/components/schemas/Estado_Vehiculo'
+              DNI:
+                $ref: '#/components/schemas/DNI'
 
     vehiculoUpdate:
       description: Nuevos atributos del Vehiculo
@@ -477,6 +480,17 @@ components:
         application/json:
           schema:
             type: object
+            required: [ id ]
+            properties:
+              modelo:
+                 $ref: '#/components/schemas/Modelo_Vehiculo'
+              fecha:
+                 $ref: '#/components/schemas/Fecha_Vehiculo'
+              matricula:
+                 $ref: '#/components/schemas/Matricula_Vehiculo'
+              Estado:
+                 $ref: '#/components/schemas/Estado_Vehiculo'
+                 
   responses:
     Response_400:
       description: '`BAD REQUEST` El identificador único ya existe.'
