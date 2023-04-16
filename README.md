@@ -16,9 +16,10 @@ Gestión de los vehículos que son propiedad de los clientes y que se reparan y/
 - VIN
 - Marca
 - Modelo
-- Año
+- Fecha
 - Matrícula
-- Fecha última intervención
+- Estado
+- DNI
 
 # Despliegue 
 
