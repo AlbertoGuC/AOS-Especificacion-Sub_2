@@ -17,3 +17,5 @@ content:
           $ref: ../schemas/Matricula_Vehiculo.yaml
         Estado:
           $ref: ../schemas/Estado_Vehiculo.yaml
+        DNI:
+          $ref: ../schemas/DNI.yaml

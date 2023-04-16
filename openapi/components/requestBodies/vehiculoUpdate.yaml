@@ -4,3 +4,14 @@ content:
   application/json:
     schema:
       type: object
+      required:
+        - id
+      properties:
+        modelo:
+          $ref: ../schemas/Modelo_Vehiculo.yaml
+        fecha:
+          $ref: ../schemas/Fecha_Vehiculo.yaml
+        matricula:
+          $ref: ../schemas/Matricula_Vehiculo.yaml
+        Estado:
+          $ref: ../schemas/Estado_Vehiculo.yaml

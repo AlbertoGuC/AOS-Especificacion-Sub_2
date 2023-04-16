@@ -5,6 +5,7 @@ value:
         marca: Seat
         modelo: Ibiza
         'fecha:': 1/7/2000
+        DNI: 12345678A
         matricula: 1234API
         estado: En reparacion
         links:
@@ -19,6 +20,7 @@ value:
         marca: Porsche
         modelo: '911'
         'fecha:': 1/7/2010
+        DNI: 12345678A
         matricula: 4365RES
         estado: En reparacion
         links:

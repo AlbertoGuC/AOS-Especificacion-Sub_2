@@ -1,0 +1,6 @@
+name: DNI
+in: path
+description: Identificador único de persona
+required: true
+schema:
+  $ref: ../schemas/DNI.yaml
