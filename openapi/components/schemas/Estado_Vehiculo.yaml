@@ -1,0 +1,12 @@
+title: >
+  Clasificación de los vehiculos dependiendo de si estan en reparacion o
+  arreglado
+
+  * Arreglado
+
+  * En reparación
+type: string
+enum:
+  - Arreglado
+  - EnReparacion
+x-faker: helpers.arrayElement()

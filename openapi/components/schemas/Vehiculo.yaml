@@ -1,0 +1,46 @@
+title: Vehiculo
+description: >
+  Medio de locomoción o transporte que permite el traslado de un lugar a otro de
+  personas o cosas.
+type: object
+properties:
+  vehiculo:
+    type: object
+    required:
+      - id
+    properties:
+      id:
+        $ref: ./Id_Vehiculo.yaml
+      marca:
+        $ref: ./Marca_Vehiculo.yaml
+      modelo:
+        $ref: ./Modelo_Vehiculo.yaml
+      año:
+        $ref: ./Fecha_Vehiculo.yaml
+      matricula:
+        $ref: ./Matricula_Vehiculo.yaml
+      estado:
+        $ref: ./Estado_Vehiculo.yaml
+      links:
+        description: Enlaces de relación del Vehiculo
+        readOnly: true
+        type: object
+        properties:
+          parent:
+            $ref: ./Link.yaml
+          self:
+            $ref: ./Link.yaml
+example:
+  vehiculo:
+    id: 1HGBH41JXMN109186
+    marca: Seat
+    modelo: Ibiza
+    'fecha:': 1/7/2000
+    estado: En reparacion
+    links:
+      parent:
+        href: http://example.com/api/v1/vehiculos
+        rel: vehiculo_post vehiculo_cget
+      self:
+        href: http://example.com/api/v1/vehiculos/1HGBH41JXMN109186
+        rel: vehiculo_get vehiculo_delete vehiculo_put

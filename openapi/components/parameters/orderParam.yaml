@@ -1,0 +1,9 @@
+name: order
+in: query
+description: 'Criterio de ordenación: `id`'
+required: false
+allowEmptyValue: false
+schema:
+  type: string
+  enum:
+    - id

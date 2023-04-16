@@ -1,0 +1,6 @@
+description: Nuevos atributos del Vehiculo
+required: true
+content:
+  application/json:
+    schema:
+      type: object

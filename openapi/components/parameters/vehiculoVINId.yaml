@@ -1,0 +1,6 @@
+name: vehiculoVIN_id
+in: path
+description: Identificador único del Vehiculo
+required: true
+schema:
+  $ref: ../schemas/Id_Vehiculo.yaml

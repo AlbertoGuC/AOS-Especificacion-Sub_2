@@ -1,0 +1,23 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: 🚜[AOS - 23 - Subsistema_2] Gestión de vehiculos 🚘
+  description: >
+    ## **[AOS - 23 - Subsistema_2]** API REST para la gestión de los vehiculos
+    de los clientes de unb taller.
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+  contact:
+    name: Equipo 7
+    url: https://www.etsisi.upm.es/
+servers:
+  - url: http://127.0.0.1:80/api/v1
+tags:
+  - name: Vehiculo
+    description: Vehiculo
+paths:
+  /vehiculos:
+    $ref: paths/vehiculos.yaml
+  /vehiculos/{vehiculoVIN_id}:
+    $ref: paths/vehiculos_{vehiculoVIN_id}.yaml

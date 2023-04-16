@@ -1,0 +1,113 @@
+parameters:
+  - $ref: ../components/parameters/vehiculoVINId.yaml
+options:
+  summary: Proporciona la lista de los métodos HTTP soportados por esta ruta.
+  description: >-
+    Devuelve una cabecera `Allow` con la lista de métodos HTTP soportados
+    (separados por comas).
+  operationId: vehiculo_options
+  tags:
+    - Vehiculo
+  responses:
+    '204':
+      description: cabecera `Allow` &lt;El cuerpo de la respuesta está vacío&gt;
+      headers:
+        Allow:
+          $ref: ../components/headers/Allow.yaml
+get:
+  summary: Obtiene un vehiculo identificado por `vehiculoVINId`
+  description: >
+    La siguiente tabla define los códigos de estado que puede devolver este
+    endpoint
+
+
+    | Status Code | Descripción | Motivo                             |
+
+    | ------------| ------------| -----------------------------------|
+
+    | **200**     | OK          | Si el vehiculo existe              |
+
+    | **404**     | NOT FOUND   | Si no existe el vehiculo           |
+  operationId: vehiculo_get
+  tags:
+    - Vehiculo
+  responses:
+    '200':
+      description: Vehiculo
+      headers:
+        ETag:
+          $ref: ../components/headers/ETag.yaml
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Vehiculo.yaml
+    '404':
+      $ref: ../components/responses/Response_404.yaml
+delete:
+  summary: Elimina el vehiculo identificado por `vehiculoVINId`
+  description: >
+    La siguiente tabla define los códigos de estado que puede devolver este
+    endpoint
+
+
+    | Status Code      | Descripción | Motivo                                   
+    |
+
+    | ---------------- | ------------|
+    ------------------------------------------|
+
+    | **204**          | NO CONTENT  | El vehiculo existía y ha sido eliminado  
+    |
+
+    | **404**          | NOT FOUND   | Si el vehiculo no existe                 
+    |
+  tags:
+    - Vehiculo
+  responses:
+    '204':
+      description: Vehiculo eliminado &lt;Cuerpo de la respuesta vacío&gt;
+    '404':
+      $ref: ../components/responses/Response_404.yaml
+put:
+  tags:
+    - Vehiculo
+  summary: Modifica el vehiculo identificado por `vehiculoVINId`.
+  description: >
+    La siguiente tabla define los códigos de estado que puede devolver este
+    endpoint
+
+    | Status Code | Descripción         |
+    Motivo                                        |
+
+    | ------------| --------------------|
+    ----------------------------------------------|
+
+    | **209**     | CONTENT RETURNED    | El vehiculo existía y ha sido
+    actualizado     |
+
+    | **404**     | NOT FOUND           | El vehiculo no
+    existe                         |
+
+    | **412**     | PRECONDITION FAILED | Si el ETag proporcionado no está
+    actualizado  |
+
+    | **422**     | UNPROCESSABLE ENTITY| Valor no permitido en alguno de los
+    attributos|
+  operationId: vehiculo_put
+  parameters:
+    - $ref: ../components/parameters/ifMatchParam.yaml
+  requestBody:
+    $ref: ../components/requestBodies/vehiculoUpdate.yaml
+  responses:
+    '209':
+      description: '`CONTENT RETURNED`: El vehiculo ha sido actualizado'
+      content:
+        application/json:
+          schema:
+            $ref: ../components/schemas/Vehiculo.yaml
+    '404':
+      $ref: ../components/responses/Response_404.yaml
+    '412':
+      $ref: ../components/responses/Response_412.yaml
+    '422':
+      $ref: ../components/responses/Response_422.yaml

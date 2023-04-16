@@ -1,0 +1,37 @@
+value:
+  vehiculos:
+    - vehiculo:
+        id: 1HGBH41JXMN109186
+        marca: Seat
+        modelo: Ibiza
+        'fecha:': 1/7/2000
+        matricula: 1234API
+        estado: En reparacion
+        links:
+          parent:
+            href: https://example.com/api/v1/vehiculos
+            rel: vehiculo_post vehiculo_cget
+          self:
+            href: https://example.com/api/v1vehiculos/1HGBH41JXMN109186
+            rel: vehiculo_get vehiculo_delete vehiculo_put
+    - vehiculo:
+        id: 5YJSA1DG9DFP14705
+        marca: Porsche
+        modelo: '911'
+        'fecha:': 1/7/2010
+        matricula: 4365RES
+        estado: En reparacion
+        links:
+          parent:
+            href: https://example.com/api/v1/vehiculos
+            rel: vehiculo_post vehiculo_cget
+          self:
+            href: https://example.com/api/v1/vehiculos/5YJSA1DG9DFP14705
+            rel: vehiculo_get vehiculo_delete vehiculo_put
+  links:
+    prevPage:
+      href: https://example.com/api/v1/vehiculos?page=2
+      rel: prevPage
+    nextPage:
+      href: https://example.com/api/v1/vehiculos?page=4
+      rel: nextPage
