@@ -5,7 +5,7 @@
 
 <h2>Trabajo AOS</h2>
 <p>
-  Que caracteristicas gurado de un vehiculo: color, marca, modelo, combistible...<br>Los vehiculos pertenecen a un cliente<br>
+  Que caracteristicas gurado de un vehiculo: color, marca, modelo, combustible...<br>Los vehiculos pertenecen a un cliente<br>
   Gestión de los vehículos que son propiedad de los clientes y que se reparan y/o revisan en el taller. Cada vehículo estará identificado de forma única por su VIN.<br> 
 </p>
 </br>VIN
