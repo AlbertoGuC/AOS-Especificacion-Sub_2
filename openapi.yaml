@@ -2,7 +2,7 @@ openapi: 3.0.3
 
 info:
   version: 1.0.0
-  title: 🚜[AOS - 23 - Subsistema_2] Gestión de vehiculos 🚘
+  title: 🚕[AOS - 23 - Subsistema_2] Gestión de vehiculos 🚘
   description: >
     ## **[AOS - 23 - Subsistema_2]** API REST para la gestión de los vehiculos de los clientes de un taller.
   license:
@@ -108,6 +108,45 @@ paths:
         '422':
           $ref: '#/components/responses/Response_422' 
 
+  /vehiculos/{DNI}:
+    parameters:
+      - $ref: '#/components/parameters/DNI' 
+    options:
+      summary: Proporciona la lista de los métodos HTTP soportados por esta ruta.
+      description: Devuelve una cabecera `Allow` con la lista de métodos HTTP soportados (separados por comas).
+      operationId: vehiculoDNI_options
+      tags: ['Vehiculo']
+      responses:
+        '204':
+          description: 'cabecera `Allow` &lt;El cuerpo de la respuesta está vacío&gt;'
+          headers:
+            Allow:
+              $ref: '#/components/headers/Allow' 
+    get:
+      summary: Obtiene una lista vehiculo identificado por `DNI`
+      description: |
+        La siguiente tabla define los códigos de estado que puede devolver este endpoint
+        
+        | Status Code | Descripción | Motivo                             |
+        | ------------| ------------| -----------------------------------|
+        | **200**     | OK          | Si el vehiculo existe              |
+        | **404**     | NOT FOUND   | Si no existe el vehiculo           |
+        
+      operationId: vehiculoDNI_get
+      tags: ['Vehiculo']
+      responses:
+        '200':
+          description: Lista de vehiculos asociados
+          headers:
+            ETag:
+              $ref: '#/components/headers/ETag' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/listaVehiculos' 
+        '404':
+          $ref: '#/components/responses/Response_404'
+          
   /vehiculos/{vehiculoVIN_id}:
     parameters:
       - $ref: '#/components/parameters/vehiculoVINId' 
@@ -193,6 +232,57 @@ paths:
 
 components:
   schemas:
+    listaVehiculos:
+      title: 'listaVehiculos'
+      description: >
+        Medio de locomoción o transporte que permite el traslado de un lugar a otro de personas o cosas.
+      type: object
+      properties:
+        listaVehiculos:
+          type: object
+          required: [ DNI ]
+          properties:
+            id:
+              $ref: '#/components/schemas/Id_Vehiculo'
+            marca:
+              $ref: '#/components/schemas/Marca_Vehiculo'
+            modelo:
+              $ref: '#/components/schemas/Modelo_Vehiculo'
+            año:
+              $ref: '#/components/schemas/Fecha_Vehiculo'
+            matricula:
+              $ref: '#/components/schemas/Matricula_Vehiculo'
+            estado:
+              $ref: '#/components/schemas/Estado_Vehiculo'
+            links:
+              description: Enlaces de relación del Vehiculo
+              readOnly: true
+              type: object
+              properties:
+                parent:
+                  $ref: '#/components/schemas/Link'
+                self:
+                    $ref: '#/components/schemas/Link'
+          example: { "vehiculo": {
+                      "id": "1HGBH41JXMN109186",
+                      "marca": "Seat",
+                      "modelo": "Ibiza",
+                      "fecha:":"1/7/2000",
+                      "estado": "En reparacion",
+                      "DNI": "12345678A",
+                      "links": {
+                        "parent": {
+                          "href": "http://example.com/api/v1/vehiculos",
+                          "rel": "vehiculo_post vehiculo_cget"
+                        },
+                        "self": {
+                          "href": "http://example.com/api/v1/vehiculos/1HGBH41JXMN109186",
+                          "rel": "vehiculo_get vehiculo_delete vehiculo_put"
+                        }
+                      }
+                    }
+                }
+      
     Vehiculo:
       title: 'Vehiculo'
       description: >
@@ -230,6 +320,7 @@ components:
                     "modelo": "Ibiza",
                     "fecha:":"1/7/2000",
                     "estado": "En reparacion",
+                    "DNI": "12345678A",
                     "links": {
                       "parent": {
                         "href": "http://example.com/api/v1/vehiculos",
@@ -242,6 +333,12 @@ components:
                     }
                   }
                }
+
+    DNI:
+      title: Identificador de cliente
+      type: string
+      pattern: "[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][A-Z]"
+      x-faker: helpers.regexpStyleStringParse()
 
     Id_Vehiculo:
       title: Identificador único del vehiculo
@@ -272,7 +369,7 @@ components:
       type: string
       pattern: "^[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z]"
       #example: "1254BCB"
-      x-faker: helpers.regexpStyleStringParse(')
+      x-faker: helpers.regexpStyleStringParse()
 
     Estado_Vehiculo:
       title: |
@@ -427,6 +524,13 @@ components:
             response-http-422:
               $ref: '#/components/examples/response-http-422'
   parameters:
+    DNI:
+      name: DNI
+      in: path
+      description: Identificador único de persona
+      required: true
+      schema:
+        $ref: '#/components/schemas/DNI'
     vehiculoVINId:
       name: vehiculoVIN_id
       in: path
@@ -477,12 +581,12 @@ components:
     vehiculos-example:
       value:
         vehiculos:
-          - { "vehiculo": { "id": "1HGBH41JXMN109186", "marca": "Seat", "modelo": "Ibiza", "fecha:":"1/7/2000", "matricula": "1234API", "estado": "En reparacion",
+          - { "vehiculo": { "id": "1HGBH41JXMN109186", "marca": "Seat", "modelo": "Ibiza", "fecha:":"1/7/2000", "DNI": "12345678A", "matricula": "1234API", "estado": "En reparacion",
                 "links": {
                   "parent": { "href": "https://example.com/api/v1/vehiculos", "rel": "vehiculo_post vehiculo_cget"},
                   "self": { "href": "https://example.com/api/v1vehiculos/1HGBH41JXMN109186", "rel": "vehiculo_get vehiculo_delete vehiculo_put" }
               }}}
-          - { "vehiculo": { "id": "5YJSA1DG9DFP14705", "marca": "Porsche", "modelo": "911", "fecha:":"1/7/2010", "matricula": "4365RES", "estado": "En reparacion",
+          - { "vehiculo": { "id": "5YJSA1DG9DFP14705", "marca": "Porsche", "modelo": "911", "fecha:":"1/7/2010", "DNI": "12345678A", "matricula": "4365RES", "estado": "En reparacion",
                 "links": {
                   "parent": { "href": "https://example.com/api/v1/vehiculos", "rel": "vehiculo_post vehiculo_cget"},
                   "self": { "href": "https://example.com/api/v1/vehiculos/5YJSA1DG9DFP14705", "rel": "vehiculo_get vehiculo_delete vehiculo_put" }
