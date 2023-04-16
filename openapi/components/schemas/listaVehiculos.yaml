@@ -21,6 +21,8 @@ properties:
         $ref: ./Matricula_Vehiculo.yaml
       estado:
         $ref: ./Estado_Vehiculo.yaml
+      DNI:
+        $ref: ./DNI.yaml
       links:
         description: Enlaces de relación del Vehiculo
         readOnly: true

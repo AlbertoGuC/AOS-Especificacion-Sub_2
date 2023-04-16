@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   version: 1.0.0
-  title: 🚕[AOS - 23 - Subsistema_2] Gestión de vehiculos 🚘
+  title: 🚜[AOS - 23 - Subsistema_2] Gestión de vehiculos 🚘
   description: >
     ## **[AOS - 23 - Subsistema_2]** API REST para la gestión de los vehiculos
     de los clientes de un taller.
