@@ -1,0 +1,38 @@
+###
+# CGET 200
+GET http://127.0.0.1:80/api/v1/vehiculos
+Accept: application/json
+
+###
+# COPTIONS 204
+OPTIONS http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+
+###
+#C CPOST 422
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+
+{
+  "id": "5V38TKH504U764812",
+  "modelo": "Sedán",
+  "fecha": "ayer",
+  "matricula": "3396KRH",
+  "Estado": "Arreglado",
+  "DNI": "40352270N"
+}
+
+###
+# COPTIONS 200
+OPTIONS http://127.0.0.1:80/api/v1/vehiculos/12345678A
+Content-Type: application/json
+
+###
+# CGET 200
+GET http://127.0.0.1:80/api/v1/vehiculos/12345678A
+Accept: application/json
+
+###
+# CGET 200
+GET http://127.0.0.1:80/api/v1/vehiculos/AAAAAAAA1AA212121
+Accept: application/json
