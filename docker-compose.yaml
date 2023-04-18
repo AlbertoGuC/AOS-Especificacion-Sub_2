@@ -10,9 +10,9 @@ services:
         volumes:
             - ./openapi:/aos:ro
 
-    frontend:
+    frontend_split:
         image: swaggerapi/swagger-ui:latest
-        container_name: vehiculos_ui
+        container_name: vehiculos_ui_split
         ports:
             - "8000:8080"
         environment:
@@ -20,6 +20,15 @@ services:
         volumes:
             - ./openapi:/aos:ro
 
+    frontend:
+        image: swaggerapi/swagger-ui:latest
+        container_name: vehiculos_ui
+        ports:
+            - "8001:8080"
+        environment:
+            SWAGGER_JSON: /aos/openapi.yaml
+        volumes:
+            - ./:/aos:ro
     proxy:
         image: caddy:latest
         container_name: vehiculos_proxy

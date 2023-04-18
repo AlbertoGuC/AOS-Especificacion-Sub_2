@@ -10,3 +10,4 @@ route /api/v1/* {
 route / {
         redir http://127.0.0.1:8000/
 }
+
