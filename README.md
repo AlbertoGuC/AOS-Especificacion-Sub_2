@@ -1,4 +1,4 @@
-# AOS-Especificacion-Sub_2
+# AOS-Especificacion-Sub_2 Grupo 7
 
 ## Integrantes
 - Alberto Guardiola Churiaque
