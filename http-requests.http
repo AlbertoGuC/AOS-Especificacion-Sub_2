@@ -61,7 +61,7 @@ Accept: application/json
 
 ###
 # CGET 200
-GET http://127.0.0.1:80/api/v1/vehiculos/1HGBH41JXMN109186
+GET http://127.0.0.1:80/api/v1/vehiculos/5YJSA1DG9DFP14705
 Accept: application/json
 
 ###
