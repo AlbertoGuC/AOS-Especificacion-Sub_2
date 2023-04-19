@@ -5,7 +5,7 @@ options:
   description: >-
     Devuelve una cabecera `Allow` con la lista de métodos HTTP soportados
     (separados por comas).
-  operationId: vehiculo_options
+  operationId: vehiculo_VIN_options
   tags:
     - Vehiculo
   responses:
@@ -28,7 +28,7 @@ get:
     | **200**     | OK          | Si el vehiculo existe              |
 
     | **404**     | NOT FOUND   | Si no existe el vehiculo           |
-  operationId: vehiculo_get
+  operationId: vehiculo_VIN_get
   tags:
     - Vehiculo
   responses:
@@ -93,7 +93,7 @@ put:
 
     | **422**     | UNPROCESSABLE ENTITY| Valor no permitido en alguno de los
     attributos|
-  operationId: vehiculo_put
+  operationId: vehiculo_VIN_put
   parameters:
     - $ref: ../components/parameters/ifMatchParam.yaml
   requestBody:

@@ -23,6 +23,19 @@ Content-Type: application/json
 }
 
 ###
+#C CPOST 400
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+
+{
+  "id": "1HGBH41JXMN109186",
+  "modelo": "Sedán",
+  "fecha": "1954-04-18",
+  "matricula": "7131JLE",
+  "Estado": "Arreglado",
+  "DNI": "99655626H"
+}
+###
 #C CPOST 422
 POST http://127.0.0.1:80/api/v1/vehiculos
 Content-Type: application/json
@@ -37,7 +50,7 @@ Content-Type: application/json
 }
 
 ###
-# COPTIONS 200
+# COPTIONS 204
 OPTIONS http://127.0.0.1:80/api/v1/vehiculos/12345678A
 Content-Type: application/json
 
@@ -48,5 +61,5 @@ Accept: application/json
 
 ###
 # CGET 200
-GET http://127.0.0.1:80/api/v1/vehiculos/AAAAAAAA1AA212121
+GET http://127.0.0.1:80/api/v1/vehiculos/1HGBH41JXMN109186
 Accept: application/json

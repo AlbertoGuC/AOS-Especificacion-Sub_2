@@ -1,0 +1,12 @@
+name: Estado_Vehiculo
+in: path
+description: >
+  Clasificación de los vehiculos dependiendo de si estan en reparacion o
+  arreglado
+
+  * Arreglado
+
+  * En reparación
+required: true
+schema:
+  $ref: ../schemas/Estado_Vehiculo.yaml

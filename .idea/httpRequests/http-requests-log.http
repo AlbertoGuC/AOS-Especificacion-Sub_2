@@ -14,6 +14,260 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "DNI": "99655626H"
 }
 
+<> 2023-04-19T135238.201.json
+
+###
+
+OPTIONS http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://127.0.0.1:80/api/v1/vehiculos/1HGBH41JXMN109186
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-19T135201-4.422.json
+
+###
+
+GET http://127.0.0.1:80/api/v1/vehiculos/12345678A
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-19T135201-3.422.json
+
+###
+
+OPTIONS http://127.0.0.1:80/api/v1/vehiculos/12345678A
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-19T135201-2.422.json
+
+###
+
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Content-Length: 145
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "033O31O70KB379391",
+  "modelo": "Sedán",
+  "fecha": "ayer",
+  "matricula": "7131JLE",
+  "Estado": "Arreglado",
+  "DNI": "99655626H"
+}
+
+<> 2023-04-19T135201-1.422.json
+
+###
+
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Content-Length: 151
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1HGBH41JXMN109186",
+  "modelo": "Sedán",
+  "fecha": "1954-04-18",
+  "matricula": "7131JLE",
+  "Estado": "Arreglado",
+  "DNI": "99655626H"
+}
+
+<> 2023-04-19T135201.422.json
+
+###
+
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Content-Length: 151
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "033O31O70KB379391",
+  "modelo": "Sedán",
+  "fecha": "1954-04-18",
+  "matricula": "7131JLE",
+  "Estado": "Arreglado",
+  "DNI": "99655626H"
+}
+
+<> 2023-04-19T135201.201.json
+
+###
+
+OPTIONS http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://127.0.0.1:80/api/v1/vehiculos
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-19T135201.200.json
+
+###
+
+GET http://127.0.0.1:80/api/v1/vehiculos
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-19T135157.200.json
+
+###
+
+GET http://127.0.0.1:80/api/v1/vehiculos/1HGBH41JXMN109186
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-19T135134-4.422.json
+
+###
+
+GET http://127.0.0.1:80/api/v1/vehiculos/12345678A
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-19T135134-3.422.json
+
+###
+
+OPTIONS http://127.0.0.1:80/api/v1/vehiculos/12345678A
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-19T135134-2.422.json
+
+###
+
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Content-Length: 145
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "033O31O70KB379391",
+  "modelo": "Sedán",
+  "fecha": "ayer",
+  "matricula": "7131JLE",
+  "Estado": "Arreglado",
+  "DNI": "99655626H"
+}
+
+<> 2023-04-19T135134-1.422.json
+
+###
+
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Content-Length: 151
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "1HGBH41JXMN109186",
+  "modelo": "Sedán",
+  "fecha": "1954-04-18",
+  "matricula": "7131JLE",
+  "Estado": "Arreglado",
+  "DNI": "99655626H"
+}
+
+<> 2023-04-19T135134.422.json
+
+###
+
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Content-Length: 151
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "033O31O70KB379391",
+  "modelo": "Sedán",
+  "fecha": "1954-04-18",
+  "matricula": "7131JLE",
+  "Estado": "Arreglado",
+  "DNI": "99655626H"
+}
+
+<> 2023-04-19T135134.201.json
+
+###
+
+OPTIONS http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+GET http://127.0.0.1:80/api/v1/vehiculos
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-04-19T135133.200.json
+
+###
+
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Content-Length: 151
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "033O31O70KB379391",
+  "modelo": "Sedán",
+  "fecha": "1954-04-18",
+  "matricula": "7131JLE",
+  "Estado": "Arreglado",
+  "DNI": "99655626H"
+}
+
 <> 2023-04-19T125559.201.json
 
 ###

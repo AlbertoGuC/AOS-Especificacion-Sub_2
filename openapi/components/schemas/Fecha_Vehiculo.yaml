@@ -1,5 +1,5 @@
 title: Año de matriculacion del vehiculo
 type: string
 format: date
-example: 1998-05-15
+example: '1998-05-15'
 x-faker: helpers.regexpStyleStringParse()

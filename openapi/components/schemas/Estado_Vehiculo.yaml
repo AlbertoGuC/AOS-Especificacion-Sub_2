@@ -1,10 +1,4 @@
-title: >
-  Clasificación de los vehiculos dependiendo de si estan en reparacion o
-  arreglado
-
-  * Arreglado
-
-  * En reparación
+title: Clasificación de los vehiculos
 type: string
 enum:
   - Arreglado

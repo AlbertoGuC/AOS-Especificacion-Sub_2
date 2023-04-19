@@ -1,0 +1,56 @@
+{
+  "vehiculos": [
+    {
+      "vehiculo": {
+        "id": "1HGBH41JXMN109186",
+        "marca": "Seat",
+        "modelo": "Ibiza",
+        "fecha:": "2000-07-01",
+        "DNI": "12345678A",
+        "matricula": "1234API",
+        "estado": "En reparacion",
+        "links": {
+          "parent": {
+            "href": "https://example.com/api/v1/vehiculos",
+            "rel": "vehiculo_post vehiculo_cget"
+          },
+          "self": {
+            "href": "https://example.com/api/v1vehiculos/1HGBH41JXMN109186",
+            "rel": "vehiculo_VIN_get vehiculo_VIN_delete vehiculo_VIN_put"
+          }
+        }
+      }
+    },
+    {
+      "vehiculo": {
+        "id": "5YJSA1DG9DFP14705",
+        "marca": "Porsche",
+        "modelo": "911",
+        "fecha:": "2010-07-01",
+        "DNI": "12345678A",
+        "matricula": "4365RES",
+        "estado": "En reparacion",
+        "links": {
+          "parent": {
+            "href": "https://example.com/api/v1/vehiculos",
+            "rel": "vehiculo_post vehiculo_cget"
+          },
+          "self": {
+            "href": "https://example.com/api/v1/vehiculos/5YJSA1DG9DFP14705",
+            "rel": "vehiculo_VIN_get vehiculo_VIN_delete vehiculo_VIN_put"
+          }
+        }
+      }
+    }
+  ],
+  "links": {
+    "prevPage": {
+      "href": "https://example.com/api/v1/vehiculos?page=2",
+      "rel": "prevPage"
+    },
+    "nextPage": {
+      "href": "https://example.com/api/v1/vehiculos?page=4",
+      "rel": "nextPage"
+    }
+  }
+}

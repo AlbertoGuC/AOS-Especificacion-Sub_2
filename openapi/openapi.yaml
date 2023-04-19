@@ -19,7 +19,11 @@ tags:
 paths:
   /vehiculos:
     $ref: paths/vehiculos.yaml
+  /vehiculos/{Estado_Vehiculo}:
+    $ref: paths/vehiculos_{Estado_Vehiculo}.yaml
   /vehiculos/{DNI}:
     $ref: paths/vehiculos_{DNI}.yaml
+  /vehiculos/{DNI}/{Estado_Vehiculo}:
+    $ref: paths/vehiculos_{DNI}_{Estado_Vehiculo}.yaml
   /vehiculos/{vehiculoVIN_id}:
     $ref: paths/vehiculos_{vehiculoVIN_id}.yaml

@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4dd4f4a4-dc66-4500-9016-5376f4e32ecf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/http-requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/http-requests.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openapi/components/examples/vehiculos-example.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/components/examples/vehiculos-example.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openapi/components/schemas/Estado_Vehiculo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/components/schemas/Estado_Vehiculo.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/openapi/components/schemas/Fecha_Vehiculo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/components/schemas/Fecha_Vehiculo.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/openapi/components/schemas/Id_Vehiculo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/components/schemas/Id_Vehiculo.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openapi/components/schemas/Vehiculo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/components/schemas/Vehiculo.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openapi/components/schemas/listaVehiculos.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/components/schemas/listaVehiculos.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openapi/openapi.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/openapi.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openapi/paths/vehiculos_{DNI}.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/paths/vehiculos_{DNI}.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openapi/paths/vehiculos_{vehiculoVIN_id}.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi/paths/vehiculos_{vehiculoVIN_id}.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +46,10 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="HTTP Request.http-requests | #4">
+  <component name="RunManager" selected="HTTP Request.http-requests | #3">
+    <configuration name="All in http-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/http-requests.http">
+      <method v="2" />
+    </configuration>
     <configuration name="http-requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/http-requests.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -52,10 +64,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.http-requests | #4" />
         <item itemvalue="HTTP Request.http-requests | #3" />
         <item itemvalue="HTTP Request.http-requests | #2" />
+        <item itemvalue="HTTP Request.All in http-requests" />
         <item itemvalue="HTTP Request.http-requests | #1" />
+        <item itemvalue="HTTP Request.http-requests | #4" />
       </list>
     </recent_temporary>
   </component>
@@ -70,6 +83,7 @@
       <workItem from="1681899292846" duration="474000" />
       <workItem from="1681900118839" duration="150000" />
       <workItem from="1681900282942" duration="1579000" />
+      <workItem from="1681904967715" duration="480000" />
     </task>
     <servers />
   </component>
