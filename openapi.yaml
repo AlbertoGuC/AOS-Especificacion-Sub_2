@@ -106,7 +106,45 @@ paths:
         '400':
           $ref: '#/components/responses/Response_400' 
         '422':
-          $ref: '#/components/responses/Response_422' 
+          $ref: '#/components/responses/Response_422'
+
+  /vehiculos/{Estado_Vehiculo}:
+    parameters:
+      - $ref: '#/components/parameters/Estado_Vehiculo'
+    options:
+      summary: Proporciona la lista de los métodos HTTP soportados por esta ruta.
+      description: Devuelve una cabecera `Allow` con la lista de métodos HTTP soportados (separados por comas).
+      operationId: vehiculoEstado_options
+      tags: ['Vehiculo']
+      responses:
+        '204':
+          description: 'cabecera `Allow` &lt;El cuerpo de la respuesta está vacío&gt;'
+          headers:
+            Allow:
+              $ref: '#/components/headers/Allow' 
+    get:
+      summary: Obtiene una lista vehiculo identificado por `Estado`
+      description: |
+        La siguiente tabla define los códigos de estado que puede devolver este endpoint
+        
+        | Status Code | Descripción | Motivo                             |
+        | ------------| ------------| -----------------------------------|
+        | **200**     | OK          | Si el estado es correcto           |
+        | **404**     | NOT FOUND   | Si no existe el estado             |
+      operationId: vehiculoEstado_get
+      tags: ['Vehiculo']
+      responses:
+        '200':
+          description: Lista de vehiculos asociados con el estado
+          headers:
+            ETag:
+              $ref: '#/components/headers/ETag' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/listaVehiculos' 
+        '404':
+          $ref: '#/components/responses/Response_404'
 
   /vehiculos/{DNI}:
     parameters:
@@ -382,7 +420,7 @@ components:
         * Arreglado
         * En reparación
       type: string
-      enum: [ Arreglado, EnReparacion ]
+      enum: [ "Arreglado", "En Reparacion"]
       x-faker: helpers.arrayElement()
 
     HTTP_Problem:
@@ -542,6 +580,16 @@ components:
             response-http-422:
               $ref: '#/components/examples/response-http-422'
   parameters:
+    Estado_Vehiculo:
+      name: Estado_Vehiculo
+      in: path
+      description: |
+        Clasificación de los vehiculos dependiendo de si estan en reparacion o arreglado
+        * Arreglado
+        * En reparación
+      required: true
+      schema:
+        $ref: '#/components/schemas/Estado_Vehiculo'
     DNI:
       name: DNI
       in: path
