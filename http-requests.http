@@ -25,7 +25,7 @@ Content-Type: application/json
 ###
 #C CPOST 400
 POST http://127.0.0.1:80/api/v1/vehiculos
-Content-Type: application/json
+Content-Type: application/problem+json
 
 {
   "id": "1HGBH41JXMN109186",
@@ -38,7 +38,7 @@ Content-Type: application/json
 ###
 #C CPOST 422
 POST http://127.0.0.1:80/api/v1/vehiculos
-Content-Type: application/json
+Content-Type: application/problem+json
 
 {
   "id": "033O31O70KB379391",
@@ -63,3 +63,13 @@ Accept: application/json
 # CGET 200
 GET http://127.0.0.1:80/api/v1/vehiculos/1HGBH41JXMN109186
 Accept: application/json
+
+###
+# CGET 200
+GET http://127.0.0.1:80/api/v1/vehiculos/12345678A/EnReparacion
+Accept: application/json
+
+###
+# CDELETE 422
+DELETE http://127.0.0.1:80/api/v1/vehiculos/1HGBH41JXMN109186
+Accept: application/problem+json

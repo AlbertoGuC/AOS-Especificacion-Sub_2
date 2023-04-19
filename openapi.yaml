@@ -267,16 +267,19 @@ paths:
       description: |
         La siguiente tabla define los códigos de estado que puede devolver este endpoint
         
-        | Status Code      | Descripción | Motivo                                    |
-        | ---------------- | ------------| ------------------------------------------|
-        | **204**          | NO CONTENT  | El vehiculo existía y ha sido eliminado   |
-        | **404**          | NOT FOUND   | Si el vehiculo no existe                  |
+        | Status Code      | Descripción         | Motivo                                        |
+        | ---------------- | --------------------| ----------------------------------------------|
+        | **204**          | NO CONTENT          | El vehiculo existía y ha sido eliminado       |
+        | **404**          | NOT FOUND           | Si el vehiculo no existe                      |
+        | **422**          | UNPROCESSABLE ENTITY| Valor no permitido en alguno de los attributos|
       tags: ['Vehiculo']
       responses:
         '204':
           description: Vehiculo eliminado &lt;Cuerpo de la respuesta vacío&gt;
         '404':
           $ref: '#/components/responses/Response_404' 
+        '422':
+          $ref: '#/components/responses/Response_422' 
     put:
       tags: ['Vehiculo']
       summary: Modifica el vehiculo identificado por `vehiculoVINId`.

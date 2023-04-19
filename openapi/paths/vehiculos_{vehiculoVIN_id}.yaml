@@ -50,17 +50,20 @@ delete:
     endpoint
 
 
-    | Status Code      | Descripción | Motivo                                   
-    |
+    | Status Code      | Descripción         |
+    Motivo                                        |
 
-    | ---------------- | ------------|
-    ------------------------------------------|
+    | ---------------- | --------------------|
+    ----------------------------------------------|
 
-    | **204**          | NO CONTENT  | El vehiculo existía y ha sido eliminado  
-    |
+    | **204**          | NO CONTENT          | El vehiculo existía y ha sido
+    eliminado       |
 
-    | **404**          | NOT FOUND   | Si el vehiculo no existe                 
-    |
+    | **404**          | NOT FOUND           | Si el vehiculo no
+    existe                      |
+
+    | **422**          | UNPROCESSABLE ENTITY| Valor no permitido en alguno de
+    los attributos|
   tags:
     - Vehiculo
   responses:
@@ -68,6 +71,8 @@ delete:
       description: Vehiculo eliminado &lt;Cuerpo de la respuesta vacío&gt;
     '404':
       $ref: ../components/responses/Response_404.yaml
+    '422':
+      $ref: ../components/responses/Response_422.yaml
 put:
   tags:
     - Vehiculo

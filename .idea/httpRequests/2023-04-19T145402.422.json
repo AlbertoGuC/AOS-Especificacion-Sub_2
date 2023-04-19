@@ -1,0 +1,17 @@
+{
+  "type": "https://stoplight.io/prism/errors#UNPROCESSABLE_ENTITY",
+  "title": "Invalid request",
+  "status": 422,
+  "detail": "Your request is not valid and no HTTP validation response was found in the spec, so Prism is generating this error for you.",
+  "validation": [
+    {
+      "location": [
+        "path",
+        "estado_vehiculo"
+      ],
+      "severity": "Error",
+      "code": "enum",
+      "message": "must be equal to one of the allowed values: Arreglado, EnReparacion"
+    }
+  ]
+}
