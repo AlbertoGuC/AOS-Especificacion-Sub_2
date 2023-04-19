@@ -1,0 +1,128 @@
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Content-Length: 151
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "033O31O70KB379391",
+  "modelo": "Sedán",
+  "fecha": "1954-04-18",
+  "matricula": "7131JLE",
+  "Estado": "Arreglado",
+  "DNI": "99655626H"
+}
+
+<> 2023-04-19T125559.201.json
+
+###
+
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Content-Length: 151
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "033O31O70KB379391",
+  "modelo": "Sedán",
+  "fecha": "1954-04-18",
+  "matricula": "7131JLE",
+  "Estado": "Arreglado",
+  "DNI": "99655626H"
+}
+
+<> 2023-04-19T125524.201.json
+
+###
+
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Content-Length: 150
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "033O31O70KB379391",
+  "modelo": "Sedán",
+  "fecha": "1/12/1998",
+  "matricula": "7131JLE",
+  "Estado": "Arreglado",
+  "DNI": "99655626H"
+}
+
+<> 2023-04-19T124933.422.json
+
+###
+
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Content-Length: 151
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "5V38TKH504U764812",
+  "modelo": "Sedán",
+  "fecha": "2018-01-15",
+  "matricula": "3396KRH",
+  "Estado": "Arreglado",
+  "DNI": "40352270N"
+}
+
+<> 2023-04-19T124619.201.json
+
+###
+
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Content-Length: 151
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "5V38TKH504U764812",
+  "modelo": "Sedán",
+  "fecha": "2018-01-15",
+  "matricula": "3396KRH",
+  "Estado": "Arreglado",
+  "DNI": "40352270N"
+}
+
+<> 2023-04-19T123803.201.json
+
+###
+
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Content-Length: 149
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": "5V38TKH504U764812",
+  "modelo": "Sedán",
+  "fecha": "2018-1-5",
+  "matricula": "3396KRH",
+  "Estado": "Arreglado",
+  "DNI": "40352270N"
+}
+
+<> 2023-04-19T123730.422.json
+
+###
+
+OPTIONS http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+

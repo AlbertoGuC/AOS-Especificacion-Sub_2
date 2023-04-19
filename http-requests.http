@@ -9,17 +9,31 @@ OPTIONS http://127.0.0.1:80/api/v1/vehiculos
 Content-Type: application/json
 
 ###
+#C CPOST 201
+POST http://127.0.0.1:80/api/v1/vehiculos
+Content-Type: application/json
+
+{
+  "id": "033O31O70KB379391",
+  "modelo": "Sedán",
+  "fecha": "1954-04-18",
+  "matricula": "7131JLE",
+  "Estado": "Arreglado",
+  "DNI": "99655626H"
+}
+
+###
 #C CPOST 422
 POST http://127.0.0.1:80/api/v1/vehiculos
 Content-Type: application/json
 
 {
-  "id": "5V38TKH504U764812",
+  "id": "033O31O70KB379391",
   "modelo": "Sedán",
   "fecha": "ayer",
-  "matricula": "3396KRH",
+  "matricula": "7131JLE",
   "Estado": "Arreglado",
-  "DNI": "40352270N"
+  "DNI": "99655626H"
 }
 
 ###

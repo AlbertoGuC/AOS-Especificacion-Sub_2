@@ -1,0 +1,20 @@
+{
+  "vehiculo": {
+    "id": "1HGBH41JXMN109186",
+    "marca": "Seat",
+    "modelo": "Ibiza",
+    "fecha:": "1/7/2000",
+    "estado": "En reparacion",
+    "DNI": "12345678A",
+    "links": {
+      "parent": {
+        "href": "http://example.com/api/v1/vehiculos",
+        "rel": "vehiculo_post vehiculo_cget"
+      },
+      "self": {
+        "href": "http://example.com/api/v1/vehiculos/1HGBH41JXMN109186",
+        "rel": "vehiculo_get vehiculo_delete vehiculo_put"
+      }
+    }
+  }
+}
