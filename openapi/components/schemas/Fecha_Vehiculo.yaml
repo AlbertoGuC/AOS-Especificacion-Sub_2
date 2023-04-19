@@ -1,5 +1,5 @@
 title: Año de matriculacion del vehiculo
 type: string
-pattern: ^[1-31]/[1-12]/[1900-2500]
+pattern: '[1-31]/[1-12]/[1900-2500]'
 example: 1/12/1998
 x-faker: helpers.regexpStyleStringParse()

@@ -1,4 +1,4 @@
 title: Matricula del vehiculo
 type: string
-pattern: ^[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z]
+pattern: '[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z]'
 x-faker: helpers.regexpStyleStringParse()
