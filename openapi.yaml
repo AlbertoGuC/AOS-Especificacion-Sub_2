@@ -114,7 +114,7 @@ paths:
     options:
       summary: Proporciona la lista de los métodos HTTP soportados por esta ruta.
       description: Devuelve una cabecera `Allow` con la lista de métodos HTTP soportados (separados por comas).
-      operationId: vehiculoEstado_options
+      operationId: vehiculo_Estado_options
       tags: ['Vehiculo']
       responses:
         '204':
@@ -131,7 +131,7 @@ paths:
         | ------------| ------------| -----------------------------------|
         | **200**     | OK          | Si el estado es correcto           |
         | **404**     | NOT FOUND   | Si no existe el estado             |
-      operationId: vehiculoEstado_get
+      operationId: vehiculo_Estado_get
       tags: ['Vehiculo']
       responses:
         '200':
@@ -152,7 +152,7 @@ paths:
     options:
       summary: Proporciona la lista de los métodos HTTP soportados por esta ruta.
       description: Devuelve una cabecera `Allow` con la lista de métodos HTTP soportados (separados por comas).
-      operationId: vehiculoDNI_options
+      operationId: vehiculo_DNI_options
       tags: ['Vehiculo']
       responses:
         '204':
@@ -170,7 +170,47 @@ paths:
         | **200**     | OK          | Si el vehiculo existe              |
         | **404**     | NOT FOUND   | Si no existe el vehiculo           |
         
-      operationId: vehiculoDNI_get
+      operationId: vehiculo_DNI_get
+      tags: ['Vehiculo']
+      responses:
+        '200':
+          description: Lista de vehiculos asociados
+          headers:
+            ETag:
+              $ref: '#/components/headers/ETag' 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/listaVehiculos' 
+        '404':
+          $ref: '#/components/responses/Response_404'
+          
+  /vehiculos/{DNI}/{Estado_Vehiculo}:
+    parameters:
+      - $ref: '#/components/parameters/DNI'
+      - $ref: '#/components/parameters/Estado_Vehiculo'
+    options:
+      summary: Proporciona la lista de los métodos HTTP soportados por esta ruta.
+      description: Devuelve una cabecera `Allow` con la lista de métodos HTTP soportados (separados por comas).
+      operationId: vehiculo_DNI_Estado_options
+      tags: ['Vehiculo']
+      responses:
+        '204':
+          description: 'cabecera `Allow` &lt;El cuerpo de la respuesta está vacío&gt;'
+          headers:
+            Allow:
+              $ref: '#/components/headers/Allow' 
+    get:
+      summary: Obtiene una lista vehiculo identificado por `DNI` y `estado`
+      description: |
+        La siguiente tabla define los códigos de estado que puede devolver este endpoint
+        
+        | Status Code | Descripción | Motivo                             |
+        | ------------| ------------| -----------------------------------|
+        | **200**     | OK          | Si los parametros de entrada existe|
+        | **404**     | NOT FOUND   | Si no los parametros               |
+        
+      operationId: vehiculo_DNI_Estado_get
       tags: ['Vehiculo']
       responses:
         '200':
@@ -191,7 +231,7 @@ paths:
     options:
       summary: Proporciona la lista de los métodos HTTP soportados por esta ruta.
       description: Devuelve una cabecera `Allow` con la lista de métodos HTTP soportados (separados por comas).
-      operationId: vehiculo_options
+      operationId: vehiculo_VIN_options
       tags: ['Vehiculo']
       responses:
         '204':
@@ -208,7 +248,7 @@ paths:
         | ------------| ------------| -----------------------------------|
         | **200**     | OK          | Si el vehiculo existe              |
         | **404**     | NOT FOUND   | Si no existe el vehiculo           |
-      operationId: vehiculo_get
+      operationId: vehiculo_VIN_get
       tags: ['Vehiculo']
       responses:
         '200':
@@ -248,7 +288,7 @@ paths:
         | **404**     | NOT FOUND           | El vehiculo no existe                         |
         | **412**     | PRECONDITION FAILED | Si el ETag proporcionado no está actualizado  |
         | **422**     | UNPROCESSABLE ENTITY| Valor no permitido en alguno de los attributos|
-      operationId: vehiculo_put
+      operationId: vehiculo_VIN_put
       parameters:
         # https://www.rfc-editor.org/rfc/rfc7232.html#page-13
         - $ref: '#/components/parameters/ifMatchParam' 
@@ -307,7 +347,7 @@ components:
                       "id": "1HGBH41JXMN109186",
                       "marca": "Seat",
                       "modelo": "Ibiza",
-                      "fecha:":"1/7/2000",
+                      "fecha:":"2000-07-01",
                       "estado": "En reparacion",
                       "DNI": "12345678A",
                       "links": {
@@ -317,7 +357,7 @@ components:
                         },
                         "self": {
                           "href": "http://example.com/api/v1/vehiculos/1HGBH41JXMN109186",
-                          "rel": "vehiculo_get vehiculo_delete vehiculo_put"
+                          "rel": "vehiculo_VIN_get vehiculo_VIN_delete vehiculo_VIN_put"
                         }
                       }
                     }
@@ -361,7 +401,7 @@ components:
                     "id": "1HGBH41JXMN109186",
                     "marca": "Seat",
                     "modelo": "Ibiza",
-                    "fecha:":"1/7/2000",
+                    "fecha:":"2000-07-01",
                     "estado": "En reparacion",
                     "DNI": "12345678A",
                     "links": {
@@ -371,7 +411,7 @@ components:
                       },
                       "self": {
                         "href": "http://example.com/api/v1/vehiculos/1HGBH41JXMN109186",
-                        "rel": "vehiculo_get vehiculo_delete vehiculo_put"
+                        "rel": "vehiculo_VIN_get vehiculo_VIN_delete vehiculo_VIN_put"
                       }
                     }
                   }
@@ -417,7 +457,7 @@ components:
     Estado_Vehiculo:
       title: Clasificación de los vehiculos
       type: string
-      enum: [ "Arreglado", "En Reparacion"]
+      enum: [ Arreglado, EnReparacion ]
       x-faker: helpers.arrayElement()
 
     HTTP_Problem:
@@ -644,15 +684,15 @@ components:
     vehiculos-example:
       value:
         vehiculos:
-          - { "vehiculo": { "id": "1HGBH41JXMN109186", "marca": "Seat", "modelo": "Ibiza", "fecha:":"1/7/2000", "DNI": "12345678A", "matricula": "1234API", "estado": "En reparacion",
+          - { "vehiculo": { "id": "1HGBH41JXMN109186", "marca": "Seat", "modelo": "Ibiza", "fecha:":"2000-07-01", "DNI": "12345678A", "matricula": "1234API", "estado": "En reparacion",
                 "links": {
                   "parent": { "href": "https://example.com/api/v1/vehiculos", "rel": "vehiculo_post vehiculo_cget"},
-                  "self": { "href": "https://example.com/api/v1vehiculos/1HGBH41JXMN109186", "rel": "vehiculo_get vehiculo_delete vehiculo_put" }
+                  "self": { "href": "https://example.com/api/v1vehiculos/1HGBH41JXMN109186", "rel": "vehiculo_VIN_get vehiculo_VIN_delete vehiculo_VIN_put" }
               }}}
-          - { "vehiculo": { "id": "5YJSA1DG9DFP14705", "marca": "Porsche", "modelo": "911", "fecha:":"1/7/2010", "DNI": "12345678A", "matricula": "4365RES", "estado": "En reparacion",
+          - { "vehiculo": { "id": "5YJSA1DG9DFP14705", "marca": "Porsche", "modelo": "911", "fecha:":"2010-07-01", "DNI": "12345678A", "matricula": "4365RES", "estado": "En reparacion",
                 "links": {
                   "parent": { "href": "https://example.com/api/v1/vehiculos", "rel": "vehiculo_post vehiculo_cget"},
-                  "self": { "href": "https://example.com/api/v1/vehiculos/5YJSA1DG9DFP14705", "rel": "vehiculo_get vehiculo_delete vehiculo_put" }
+                  "self": { "href": "https://example.com/api/v1/vehiculos/5YJSA1DG9DFP14705", "rel": "vehiculo_VIN_get vehiculo_VIN_delete vehiculo_VIN_put" }
               }}}
         links: {
           "prevPage": { "href": "https://example.com/api/v1/vehiculos?page=2", "rel": "prevPage" },
