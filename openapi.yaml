@@ -365,8 +365,8 @@ components:
     Fecha_Vehiculo:
       title: Año de matriculacion del vehiculo
       type: string
-      pattern: "[1-31]/[1-12]/[1900-2500]"
-      example: "1/12/1998"
+      format: date
+      example: "1998-05-15"
       x-faker: helpers.regexpStyleStringParse()
 
     Matricula_Vehiculo:
