@@ -348,7 +348,7 @@ components:
     Id_Vehiculo:
       title: Identificador único del vehiculo
       type: string
-      pattern: "^[A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][0-9][A-Z,0-9][A-Z,0-9][0-9][0-9][0-9][0-9][0-9][0-9]"
+      pattern: "[A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][0-9][A-Z,0-9][A-Z,0-9][0-9][0-9][0-9][0-9][0-9][0-9]"
       #example: "1HGBH41JXMN109186"
       x-faker: helpers.regexpStyleStringParse()
     
@@ -365,14 +365,14 @@ components:
     Fecha_Vehiculo:
       title: Año de matriculacion del vehiculo
       type: string
-      pattern: "^[1-31]/[1-12]/[1900-2500]"
+      pattern: "[1-31]/[1-12]/[1900-2500]"
       example: "1/12/1998"
       x-faker: helpers.regexpStyleStringParse()
 
     Matricula_Vehiculo:
       title: Matricula del vehiculo
       type: string
-      pattern: "^[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z]"
+      pattern: "[0-9][0-9][0-9][0-9][A-Z][A-Z][A-Z]"
       #example: "1254BCB"
       x-faker: helpers.regexpStyleStringParse()
 
