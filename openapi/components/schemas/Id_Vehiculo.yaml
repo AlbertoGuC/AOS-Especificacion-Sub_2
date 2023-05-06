@@ -1,5 +1,4 @@
 title: Identificador único del vehiculo
 type: string
-pattern: >-
-  [A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][A-Z,0-9][0-9][0-9][0-9][0-9][0-9]
+pattern: '[A-HJ-NPR-Z0-9]{17}'
 x-faker: helpers.regexpStyleStringParse()
