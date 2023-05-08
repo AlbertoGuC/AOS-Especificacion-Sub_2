@@ -460,7 +460,7 @@ components:
     Estado_Vehiculo:
       title: Clasificación de los vehiculos
       type: string
-      enum: [ Arreglado, EnReparacion ]
+      enum: [ Arreglado, Reparando, Peritaje, recepcionado, probando, enRodaje]
       x-faker: helpers.arrayElement()
 
     HTTP_Problem:
