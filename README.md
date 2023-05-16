@@ -7,6 +7,7 @@
 - Javier Rodríguez de Tujillo Landecho
 - Alberto Rey Cristino
 
+# Enlace a repo Práctica 2: https://github.com/Omarpparada/AOS_Sub2_Implementaci-n
 ## Trabajo AOS 
 
 # Guardado y gestión de los vehiculos de un cliente
