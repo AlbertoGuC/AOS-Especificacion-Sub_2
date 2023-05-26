@@ -8,6 +8,7 @@
 - Alberto Rey Cristino
 
 # Enlace a repo Práctica 2: https://github.com/Omarpparada/AOS_Sub2_Implementaci-n
+## Imagen de la implementación: omarpp/aos_vehiculos
 ## Trabajo AOS 
 
 # Guardado y gestión de los vehiculos de un cliente
